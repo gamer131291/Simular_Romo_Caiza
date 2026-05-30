@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paso 5 - Ejemplo Practico Renderizado</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Simulador Educativo del Funcionamiento de la Web</h1>
+    <p class="subtitulo">UTPL - Tecnologias Web | Luis Miguel Romo Caiza</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">1. URL</a></li>
+      <li><a href="solicitud.html">2. Solicitud HTTP</a></li>
+      <li><a href="procesamiento.html">3. Servidor</a></li>
+      <li><a href="respuesta.html">4. Respuesta</a></li>
+      <li><a href="practica.html" class="activo">5. Practica</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section>
+      <h2>Paso 5: Mini Pagina Renderizada - Ejemplo Practico</h2>
+      <p>Esta pagina demuestra todos los elementos HTML5 requeridos en accion:
+         imagen, lista, tabla, formulario y texto semantico estructurado.</p>
+      <article>
+        <h3>Sobre el Simulador</h3>
+        <figure>
+          <img src="img/estudiante.png"
+               alt="Foto formal del estudiante Luis Miguel Romo Caiza"
+               width="180">
+          <figcaption>Luis Miguel Romo Caiza - Ing. Tecnologias de la Informacion, UTPL</figcaption>
+        </figure>
+        <p>Este simulador fue desarrollado como actividad de aprendizaje practico-experimental
+           (APE) para la asignatura <strong>Tecnologias Web</strong> UTPL, periodo ABR-AGO 2026.</p>
+      </article>
+      <aside>
+        <h3>Tecnologias utilizadas</h3>
+        <ul>
+          <li>HTML5 con etiquetas semanticas</li>
+          <li>CSS3 con variables y flexbox</li>
+          <li>Protocolo HTTP/1.1</li>
+          <li>Servidor Apache (XAMPP)</li>
+          <li>Validacion W3C</li>
+        </ul>
+      </aside>
+      <section>
+        <h3>Resumen del proceso web (5 pasos)</h3>
+        <table>
+          <caption>Tabla 5. Resumen del flujo completo de la Web</caption>
+          <thead>
+            <tr><th>Paso</th><th>Accion</th><th>Tecnologia involucrada</th><th>Resultado</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Usuario ingresa URL</td><td>Navegador + DNS</td><td>Resolucion de dominio a IP</td></tr>
+            <tr><td>2</td><td>Navegador envia peticion</td><td>HTTP GET / POST</td><td>Solicitud llega al servidor</td></tr>
+            <tr><td>3</td><td>Servidor procesa solicitud</td><td>Apache, PHP, BD</td><td>Se genera la respuesta</td></tr>
+            <tr><td>4</td><td>Servidor envia respuesta</td><td>HTTP 200 OK + HTML</td><td>Navegador recibe el documento</td></tr>
+            <tr><td>5</td><td>Navegador renderiza</td><td>Motor de renderizado (DOM+CSS)</td><td>Pagina visible al usuario</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h3>Formulario de contacto / comentarios</h3>
+        <form action="#" method="post">
+          <label for="nombre">Nombre completo:</label><br>
+          <input type="text" id="nombre" name="nombre"
+                 placeholder="Luis Miguel Romo Caiza" required><br><br>
+          <label for="email">Correo electronico:</label><br>
+          <input type="email" id="email" name="email"
+                 placeholder="usuario@utpl.edu.ec" required><br><br>
+          <label for="tema">Tema consultado:</label><br>
+          <select id="tema" name="tema">
+            <option value="http">Protocolo HTTP</option>
+            <option value="html5">HTML5 semantico</option>
+            <option value="servidor">Servidores web</option>
+            <option value="otro">Otro</option>
+          </select><br><br>
+          <label for="mensaje">Mensaje:</label><br>
+          <textarea id="mensaje" name="mensaje" rows="4" cols="50"
+            placeholder="Escribe tu consulta aqui..."></textarea><br><br>
+          <button type="submit">Enviar consulta</button>
+          <button type="reset">Limpiar</button>
+        </form>
+      </section>
+    </section>
+  </main>
+  <footer>
+    <p>Simulador Web &copy; 2026 | Luis Miguel Romo Caiza | UTPL - Tecnologias Web DSOF_2043</p>
+  </footer>
+</body>
+</html>
+ 

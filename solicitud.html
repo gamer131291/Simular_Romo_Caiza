@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paso 2 - Solicitud HTTP</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Simulador Educativo del Funcionamiento de la Web</h1>
+    <p class="subtitulo">UTPL - Tecnologias Web | Luis Miguel Romo Caiza</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">1. URL</a></li>
+      <li><a href="solicitud.html" class="activo">2. Solicitud HTTP</a></li>
+      <li><a href="procesamiento.html">3. Servidor</a></li>
+      <li><a href="respuesta.html">4. Respuesta</a></li>
+      <li><a href="practica.html">5. Practica</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section>
+      <h2>Paso 2: La Solicitud HTTP</h2>
+      <p>Una vez que el navegador conoce la IP del servidor, envia una
+         <strong>solicitud HTTP</strong> (HyperText Transfer Protocol).
+         Los dos metodos mas comunes son <code>GET</code> y <code>POST</code>.</p>
+      <figure>
+        <img src="img/get-post.png"
+             alt="Comparativa visual de metodos HTTP GET y POST" width="700">
+        <figcaption>Figura 2. Diferencias entre los metodos GET y POST.</figcaption>
+      </figure>
+      <h3>Metodos HTTP principales</h3>
+      <table>
+        <caption>Tabla 2. Metodos HTTP GET y POST</caption>
+        <thead>
+          <tr><th>Metodo</th><th>Descripcion</th><th>Cuando se usa</th><th>Ejemplo</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>GET</td><td>Solicita datos sin modificarlos</td><td>Cargar paginas, busquedas</td><td>GET /index.html HTTP/1.1</td></tr>
+          <tr><td>POST</td><td>Envia datos al servidor para procesar</td><td>Formularios, login</td><td>POST /login HTTP/1.1</td></tr>
+          <tr><td>PUT</td><td>Actualiza un recurso existente</td><td>Edicion de datos (APIs REST)</td><td>PUT /usuario/5 HTTP/1.1</td></tr>
+          <tr><td>DELETE</td><td>Elimina un recurso del servidor</td><td>Borrado de registros</td><td>DELETE /articulo/3 HTTP/1.1</td></tr>
+        </tbody>
+      </table>
+      <h3>Ejemplo de cabecera HTTP GET</h3>
+      <pre><code>GET /index.html HTTP/1.1
+Host: www.utpl.edu.ec
+Accept: text/html
+Accept-Language: es-EC
+User-Agent: Mozilla/5.0</code></pre>
+      <h3>Referencia oficial</h3>
+      <ul>
+        <li><a href="https://developer.mozilla.org/es/docs/Web/HTTP/Methods"
+               target="_blank" rel="noopener">MDN Web Docs - Metodos HTTP</a></li>
+      </ul>
+      <form action="#" method="post">
+        <label for="usuario">Simula un envio POST:</label><br>
+        <input type="text" id="usuario" name="usuario" placeholder="Tu nombre">
+        <button type="submit">Enviar POST</button>
+      </form>
+    </section>
+  </main>
+  <footer><p>Simulador Web &copy; 2026 | Luis Miguel Romo Caiza | UTPL</p></footer>
+</body>
+</html>

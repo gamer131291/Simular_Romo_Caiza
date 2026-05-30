@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paso 4 - Respuesta y Renderizado HTML5</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Simulador Educativo del Funcionamiento de la Web</h1>
+    <p class="subtitulo">UTPL - Tecnologias Web | Luis Miguel Romo Caiza</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">1. URL</a></li>
+      <li><a href="solicitud.html">2. Solicitud HTTP</a></li>
+      <li><a href="procesamiento.html">3. Servidor</a></li>
+      <li><a href="respuesta.html" class="activo">4. Respuesta</a></li>
+      <li><a href="practica.html">5. Practica</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section>
+      <h2>Paso 4: Respuesta HTTP y Renderizado HTML5</h2>
+      <p>El navegador recibe la respuesta del servidor. Analiza el HTML,
+         construye el <strong>DOM</strong>, aplica los estilos CSS
+         y pinta la pagina en pantalla.</p>
+      <figure>
+        <img src="img/renderizado.png"
+             alt="Pipeline de renderizado: DOM, CSSOM y Pintado"
+             width="700">
+        <figcaption>Figura 4. Pipeline de renderizado del navegador.</figcaption>
+      </figure>
+      <h3>Etiquetas semanticas de HTML5</h3>
+      <table>
+        <caption>Tabla 4. Etiquetas semanticas HTML5 y su proposito</caption>
+        <thead>
+          <tr><th>Etiqueta</th><th>Proposito</th><th>Beneficio SEO/Accesibilidad</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>&lt;header&gt;</td><td>Encabezado de pagina o seccion</td><td>Define la zona superior</td></tr>
+          <tr><td>&lt;nav&gt;</td><td>Menu de navegacion principal</td><td>Lectores de pantalla lo identifican</td></tr>
+          <tr><td>&lt;main&gt;</td><td>Contenido principal unico</td><td>Mejora la indexacion</td></tr>
+          <tr><td>&lt;section&gt;</td><td>Seccion tematica del contenido</td><td>Organiza logicamente el documento</td></tr>
+          <tr><td>&lt;article&gt;</td><td>Contenido autonomo (blog, noticia)</td><td>Facilita scraping y RSS</td></tr>
+          <tr><td>&lt;aside&gt;</td><td>Contenido complementario lateral</td><td>Separa contenido secundario</td></tr>
+          <tr><td>&lt;footer&gt;</td><td>Pie de pagina o seccion</td><td>Agrupa datos de contacto/derechos</td></tr>
+          <tr><td>&lt;figure&gt;</td><td>Imagen con leyenda</td><td>Vincula imagen a su descripcion</td></tr>
+        </tbody>
+      </table>
+      <h3>Muestra de codigo HTML5 semantico</h3>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Mi Pagina&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;&lt;h1&gt;Mi Sitio Web&lt;/h1&gt;&lt;/header&gt;
+  &lt;nav&gt;&lt;a href="index.html"&gt;Inicio&lt;/a&gt;&lt;/nav&gt;
+  &lt;main&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Bienvenido&lt;/h2&gt;
+      &lt;p&gt;Contenido principal aqui.&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+  &lt;footer&gt;&lt;p&gt;&amp;copy; 2026 Luis Romo&lt;/p&gt;&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      <form action="#" method="get">
+        <label for="etiqueta">Busca una etiqueta HTML:</label><br>
+        <input type="search" id="etiqueta" name="etiqueta" placeholder="Ej: section, article">
+        <button type="submit">Buscar</button>
+      </form>
+    </section>
+  </main>
+  <footer><p>Simulador Web &copy; 2026 | Luis Miguel Romo Caiza | UTPL</p></footer>
+</body>
+</html>
+ 

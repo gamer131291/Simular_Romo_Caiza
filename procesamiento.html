@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paso 3 - Procesamiento en el Servidor</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Simulador Educativo del Funcionamiento de la Web</h1>
+    <p class="subtitulo">UTPL - Tecnologias Web | Luis Miguel Romo Caiza</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">1. URL</a></li>
+      <li><a href="solicitud.html">2. Solicitud HTTP</a></li>
+      <li><a href="procesamiento.html" class="activo">3. Servidor</a></li>
+      <li><a href="respuesta.html">4. Respuesta</a></li>
+      <li><a href="practica.html">5. Practica</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section>
+      <h2>Paso 3: Procesamiento en el Servidor Web</h2>
+      <p>El <strong>servidor web</strong> (p. ej. Apache en XAMPP) recibe la
+         solicitud HTTP y determina que recurso devolver.</p>
+      <figure>
+        <img src="img/cliente-servidor.png"
+             alt="Arquitectura cliente-servidor con flujo de peticion y respuesta"
+             width="700">
+        <figcaption>Figura 3. Arquitectura Cliente-Servidor.</figcaption>
+      </figure>
+      <h3>Como funciona el servidor?</h3>
+      <ol>
+        <li>Recibe la peticion HTTP del navegador.</li>
+        <li>Interpreta la ruta solicitada (p. ej. /index.html).</li>
+        <li>Busca el recurso en el sistema de archivos o en la base de datos.</li>
+        <li>Ejecuta scripts del lado del servidor si es necesario.</li>
+        <li>Construye la respuesta HTTP con codigo de estado y cuerpo.</li>
+      </ol>
+      <h3>Ejemplo de respuesta HTTP del servidor</h3>
+      <pre><code>HTTP/1.1 200 OK
+Date: Mon, 26 May 2026 18:00:00 GMT
+Server: Apache/2.4.57
+Content-Type: text/html; charset=UTF-8
+Content-Length: 2456</code></pre>
+      <h3>Diferencias: Cliente vs. Servidor</h3>
+      <table>
+        <caption>Tabla 3. Programacion del lado del cliente vs. servidor</caption>
+        <thead>
+          <tr><th>Aspecto</th><th>Lado del Cliente</th><th>Lado del Servidor</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Lenguajes</td><td>HTML, CSS, JavaScript</td><td>PHP, Python, Node.js</td></tr>
+          <tr><td>Ejecucion</td><td>En el navegador del usuario</td><td>En el servidor web</td></tr>
+          <tr><td>Acceso a datos</td><td>Solo datos del navegador</td><td>Bases de datos, archivos</td></tr>
+          <tr><td>Seguridad</td><td>Codigo visible por el usuario</td><td>Codigo oculto al usuario</td></tr>
+        </tbody>
+      </table>
+      <form action="#" method="get">
+        <label for="recurso">Simula una ruta de servidor:</label><br>
+        <input type="text" id="recurso" name="recurso" placeholder="/paginas/contacto.html">
+        <button type="submit">Consultar servidor</button>
+      </form>
+    </section>
+  </main>
+  <footer><p>Simulador Web &copy; 2026 | Luis Miguel Romo Caiza | UTPL</p></footer>
+</body>
+</html>

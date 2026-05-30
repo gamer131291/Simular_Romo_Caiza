@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paso 1 - Que ocurre al ingresar una URL?</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Simulador Educativo del Funcionamiento de la Web</h1>
+    <p class="subtitulo">UTPL - Tecnologias Web | Luis Miguel Romo Caiza</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="activo">1. URL</a></li>
+      <li><a href="solicitud.html">2. Solicitud HTTP</a></li>
+      <li><a href="procesamiento.html">3. Servidor</a></li>
+      <li><a href="respuesta.html">4. Respuesta</a></li>
+      <li><a href="practica.html">5. Practica</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section>
+      <h2>Paso 1: Que ocurre cuando escribes una URL?</h2>
+      <p>Cuando escribes una direccion web en tu navegador (por ejemplo
+         <code>https://www.utpl.edu.ec</code>), el sistema inicia un proceso
+         automatizado de multiples pasos para mostrarte la pagina correcta.</p>
+      <figure>
+        <img src="img/dns-resolucion.png"
+             alt="Diagrama del flujo de resolucion DNS y URL"
+             width="700">
+        <figcaption>Figura 1. Flujo completo desde la URL hasta la respuesta del servidor.</figcaption>
+      </figure>
+      <h3>Que es una URL?</h3>
+      <p>URL significa <strong>Uniform Resource Locator</strong> (Localizador Uniforme de Recursos).
+         Es la direccion unica que identifica un recurso en Internet.</p>
+      <table>
+        <caption>Tabla 1. Partes de una URL</caption>
+        <thead>
+          <tr><th>Componente</th><th>Ejemplo</th><th>Descripcion</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Protocolo</td><td>https://</td><td>Define como viajan los datos</td></tr>
+          <tr><td>Dominio</td><td>www.utpl.edu.ec</td><td>Nombre del servidor</td></tr>
+          <tr><td>Ruta</td><td>/carrera/sistemas</td><td>Recurso especifico</td></tr>
+          <tr><td>Parametros</td><td>?id=42</td><td>Datos adicionales para el servidor</td></tr>
+        </tbody>
+      </table>
+      <h3>Pasos del proceso</h3>
+      <ol>
+        <li>El usuario escribe la URL en el navegador.</li>
+        <li>El navegador consulta el <strong>DNS</strong> para convertir el dominio en IP.</li>
+        <li>El navegador envia una peticion HTTP al servidor.</li>
+        <li>El servidor responde con el contenido HTML.</li>
+        <li>El navegador interpreta y renderiza la pagina.</li>
+      </ol>
+      <form action="#" method="get">
+        <label for="url-demo">Simula ingresar una URL:</label><br>
+        <input type="url" id="url-demo" name="url-demo"
+               placeholder="https://www.ejemplo.com" style="width:60%;">
+        <button type="submit">Ir</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>Simulador Web &copy; 2026 | Luis Miguel Romo Caiza | UTPL</p>
+  </footer>
+</body>
+</html>
